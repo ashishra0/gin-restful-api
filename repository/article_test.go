@@ -7,7 +7,7 @@ import (
 
 func TestAdd(t *testing.T) {
 	article := New()
-	article.Add(resources.New{"hey", "hello", 0})
+	article.Add(resources.New{1, "hey", "hello", 0})
 	for _, a := range article.Articles {
 		if a.Count < 0 {
 			t.Errorf("Body count cannot be zero")
@@ -21,7 +21,7 @@ func TestAdd(t *testing.T) {
 func TestGetAll(t *testing.T) {
 	article := New()
 	article.Add(resources.New{})
-	results := article.GetAll()
+	results := article.Get()
 	if len(results) != 1 {
 		t.Errorf("List is empty")
 	}
