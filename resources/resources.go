@@ -14,6 +14,7 @@ type SessionVariables struct {
 	XHasuraRole string `json:"x-hasura-role"`
 }
 type New struct {
+	ID    int    `json:"id"`
 	Title string `json:"title"`
 	Body  string `json:"body"`
 	Count int    `json:"count"`
