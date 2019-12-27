@@ -2,4 +2,4 @@ dev:
 		go run main.go
 
 test-article:
-		richgo test ./services
+		richgo test ./repository
