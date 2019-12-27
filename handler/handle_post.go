@@ -2,7 +2,7 @@ package handler
 
 import (
 	"encoding/json"
-	"fmt"
+	grapqhl "go_microservice/graphql"
 	repository "go_microservice/repository"
 	"go_microservice/resources"
 	"io/ioutil"
@@ -29,6 +29,6 @@ func HandlePost() gin.HandlerFunc {
 
 func handleCount(a resources.New) {
 	repo := repository.New()
-	repo.Add(a)
-	fmt.Println(repo.GetAll())
+	variables := repo.Add(a)
+	grapqhl.MutateQuery(variables)
 }
