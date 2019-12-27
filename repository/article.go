@@ -13,12 +13,18 @@ func New() *Repo {
 }
 
 // Add will append new articles to the Repo
-func (r *Repo) Add(article resources.New) {
+func (r *Repo) Add(article resources.New) map[string]interface{} {
 	article.Count = len(article.Body)
 	r.Articles = append(r.Articles, article)
+	return map[string]interface{}{
+		"id":    article.ID,
+		"title": article.Title,
+		"body":  article.Body,
+		"count": len(article.Body),
+	}
 }
 
-// GetAll will return all the articles in the Repo
-func (r *Repo) GetAll() []resources.New {
+// Get will return all the articles in the Repo
+func (r *Repo) Get() []resources.New {
 	return r.Articles
 }
