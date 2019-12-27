@@ -1,2 +1,5 @@
 dev:
-		go run httpd/server.go
+		go run main.go
+
+test-article:
+		richgo test ./services
