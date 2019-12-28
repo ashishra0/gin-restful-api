@@ -8,6 +8,7 @@ import (
 	"github.com/shahidhk/gql"
 )
 
+// MutateQuery sends a mutation query back to the console
 func MutateQuery(v map[string]interface{}) {
 	client := gql.NewClient("http://localhost:8080/v1/graphql", nil)
 	var articles = repository.New()
