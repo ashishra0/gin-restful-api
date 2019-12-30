@@ -3,3 +3,6 @@ dev:
 
 test-article:
 		richgo test ./repository
+
+console:
+		docker-compose up -d
