@@ -1,6 +1,6 @@
 ### REST API using Gin framework
 
-A simple REST Api web service to test event triggers in Hasura graphql-engine.
+A simple REST Api web service to test event webhooks with Hasura graphql-engine.
 
 ### Usage
 
