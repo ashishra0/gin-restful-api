@@ -1,6 +1,6 @@
-### REST API using Gin framework
+### Web service made with Gin
 
-A simple REST Api web service to test event webhooks with Hasura graphql-engine.
+A Go web service to test webhooks on postgres insert event on Hasura Graphql Engine.
 
 ### Usage
 
@@ -13,3 +13,6 @@ A simple REST Api web service to test event webhooks with Hasura graphql-engine.
 * After you insert you should see the record was created succesfully and the `count` was updated to the word count in the `body`.
 
 ___
+
+### What is Hasura GraphQL Engine?
+Hasura GraphQL Engine lets you make powerful queries with built-in filtering, pagination, pattern search, bulk insert, update, delete mutations & subscriptions. You can also Trigger webhooks or serverless functions on Postgres insert/update/delete events. Comes with fine-grained dynamic access control that integrates with your auth system. This one-click setup also includes an empty Postgres database and automatic HTTPS from Let’s Encrypt using Caddy webserver.
